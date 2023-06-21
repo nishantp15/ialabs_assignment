@@ -10,7 +10,7 @@ const Dashboard = () => {
  
   let router = useRouter();
   if (!authState.token) {
-    router.push("/login");
+    router.push();
   }
 
   return <div className={styles.dashboard}>
