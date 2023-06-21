@@ -4,7 +4,7 @@ import React from "react";
 import { AppContext } from "../components/AuthProvider/AuthProvider";
 import { useContext } from "react";
 import styles from './Dashboard.module.css'
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 const Dashboard = () => {
   const { authState, logoutUser } = useContext(AppContext);
  
