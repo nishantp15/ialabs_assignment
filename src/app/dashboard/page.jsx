@@ -9,8 +9,7 @@ const Dashboard = () => {
  
   let router = useRouter();
   if (!authState.token) {
-    alert("login first");
-    return;
+    return <div className={styles.dashboard}><p>Please login first</p></div>
   }
 
   return <div className={styles.dashboard}>
