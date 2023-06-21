@@ -9,9 +9,9 @@ const Dashboard = () => {
  
   let router = useRouter();
   if (!authState.token) {
-    router?.push("/dashboard/login");
+    router.push("/dashboard/login");
   }
-  console.log(authState.token);
+
   return <div className={styles.dashboard}>
     <h1>Welcome</h1>
     <p>No data available</p>
