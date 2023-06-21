@@ -3,11 +3,11 @@ import React, { useState } from 'react'
 import navbarStyle from './Navbar.module.css'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-// import { useContext } from 'react'
-// import { AppContext } from '../AuthProvider/AuthProvider'
+import { useContext } from 'react'
+import { AppContext } from '../AuthProvider/AuthProvider'
 
 const Navbar = () => {
-  // const {authState, logoutUser} = useContext(AppContext)
+  const {authState, logoutUser} = useContext(AppContext)
   // let [token, setToken] = useState(localStorage.getItem("userToken")||"");
   let router = useRouter()
   function logout(){
