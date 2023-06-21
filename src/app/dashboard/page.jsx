@@ -1,11 +1,11 @@
 "use client";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
-// import { AppContext } from "../components/AuthProvider/AuthProvider";
-// import { useContext } from "react";
+import { AppContext } from "../components/AuthProvider/AuthProvider";
+import { useContext } from "react";
 import styles from './Dashboard.module.css'
 const Dashboard = () => {
-  // const { authState, logoutUser } = useContext(AppContext);
+  const { authState, logoutUser } = useContext(AppContext);
  
   let router = useRouter();
   if (!authState.token) {
