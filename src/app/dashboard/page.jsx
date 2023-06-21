@@ -5,6 +5,7 @@ import { AppContext } from "../components/AuthProvider/AuthProvider";
 import { useContext } from "react";
 import styles from './Dashboard.module.css'
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 const Dashboard = () => {
   const { authState, logoutUser } = useContext(AppContext);
  
@@ -15,7 +16,9 @@ const Dashboard = () => {
 
   return <div className={styles.dashboard}>
     <h1>Welcome</h1>
-    <p>No data available</p>
+    {/* <p>No data available</p> */}
+    {/* <Link href={'dashboard/login'}>logoin</Link> */}
+    
   </div>
 };
 
