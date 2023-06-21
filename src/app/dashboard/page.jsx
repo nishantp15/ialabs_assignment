@@ -1,15 +1,16 @@
 "use client";
-// import { useRouter } from "next/navigation";
+
 import React from "react";
 import { AppContext } from "../components/AuthProvider/AuthProvider";
 import { useContext } from "react";
 import styles from './Dashboard.module.css'
+import { useRouter } from "next/router";
 const Dashboard = () => {
   const { authState, logoutUser } = useContext(AppContext);
  
-  // let router = useRouter();
+  let router = useRouter();
   if (!authState.token) {
-    // router.push("/dashboard/login");
+    router.push("/dashboard/login");
   }
 
   return <div className={styles.dashboard}>
